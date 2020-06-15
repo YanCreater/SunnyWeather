@@ -54,6 +54,4 @@ class PlaceAdapter(private  val fragment:PlaceFragment,private val placeList:Lis
         holder.placeName.text=place.name
         holder.placeAddress.text = place.address
     }
-
-
 }
