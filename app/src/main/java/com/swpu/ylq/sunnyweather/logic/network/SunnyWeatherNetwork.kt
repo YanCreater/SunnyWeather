@@ -13,6 +13,14 @@ import kotlin.coroutines.suspendCoroutine
  * 对所有的网络请求的API进行封装
  */
 object SunnyWeatherNetwork {
+
+    private val weatherService  = ServiceCreator.create(WeatherService::class.java)
+
+    suspend fun getDailyWeather(lng :String,lat:String) =
+        weatherService.getDailyWeather(lng, lat).await()
+
+    suspend fun getRealtimeWeather(lng :String ,lat :String) =
+        weatherService.getRealtimeWeather(lng, lat).await()
     // 创建一个PlaceService接口的动态代理对象
     private val placeService  = ServiceCreator.create(PlaceService::class.java)
     // 定义函数  用于调用在PlaceService接口中定义的searchPlaces（）方法 发起搜索城市数据的请求
