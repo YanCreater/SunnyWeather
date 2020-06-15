@@ -58,7 +58,7 @@
                         android:id="@+id/coldRiskText"
                         android:layout_marginTop="4dp"
                         android:textSize="16sp"
-                        android:textColor="?android:attr/textColorPrimary"
+                        android:textColor="@color/colorPrimary"
                         />
 
                 </LinearLayout>
@@ -94,7 +94,7 @@
                         android:layout_marginTop="4dp"
                         android:textSize="16sp"
                         android:id="@+id/dressingText"
-                        android:textColor="?android:attr/textColorPrimary"/>
+                        android:textColor="@color/colorPrimary"/>
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
@@ -135,7 +135,7 @@
                         android:id="@+id/ultravoiletText"
                         android:layout_marginTop="4dp"
                         android:textSize="16sp"
-                        android:textColor="?android:attr/textColorPrimary"/>
+                        android:textColor="@color/colorPrimary"/>
 
                 </LinearLayout>
             </RelativeLayout>
@@ -170,7 +170,7 @@
                         android:id="@+id/carWashingText"
                         android:layout_marginTop="4dp"
                         android:textSize="16sp"
-                        android:textColor="?android:attr/textColorPrimary"/>
+                        android:textColor="@color/colorPrimary"/>
 
                 </LinearLayout>
             </RelativeLayout>

@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.swpu.ylq.sunnyweather.MainActivity
 import com.swpu.ylq.sunnyweather.R
 import com.swpu.ylq.sunnyweather.ui.weather.WeatherActivity
 import kotlinx.android.synthetic.main.fragment_place.*
@@ -41,7 +42,7 @@ class PlaceFragment:Fragment() {
      */
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        if (viewModel.isPlaceSaved()){
+        if (viewModel.isPlaceSaved()&&activity is MainActivity){
             val place = viewModel.getSavePlace()
             val intent = Intent(context,WeatherActivity::class.java).apply {
                 putExtra("location_lng",place.location.lng)
@@ -50,7 +51,7 @@ class PlaceFragment:Fragment() {
             }
             startActivity(intent)
             activity?.finish()
-            return 
+            return
         }
         val layoutManager = LinearLayoutManager(activity)
         recyclerView.layoutManager = layoutManager //给recyclerView设置了LayoutManager和适配器
